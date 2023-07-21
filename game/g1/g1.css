@@ -1,0 +1,64 @@
+.question-info > div:first-child  {
+    color: var(--clr-text);
+}
+
+.game-round-result {
+    color: var(--clr-primary);
+}
+
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.game-round-result {
+	font-size: var(--fs-600);
+	font-weight: 600;
+}
+
+.options {
+    display: grid;
+	grid-template-columns: repeat(4, calc(var(--space-3) + var(--space-3)));
+	gap: var(--space-1);
+}
+
+.options button {
+    padding: var(--space-1);
+    width: var(--space-3);
+}
+
+@media (min-width: 250px) {
+    .options {
+        grid-template-columns: repeat(4, calc(var(--space-4) + var(--space-5)));
+        gap: var(--space-2);
+    }
+    
+    .options button {
+        width: var(--space-4);
+    }
+}
+
+@media (min-width: 350px) {
+	.options {
+        grid-template-columns: repeat(4, calc(var(--space-5) + var(--space-5)));
+        gap: var(--space-3);
+    }
+    
+    .options button {
+        padding: var(--space-2);
+        width: var(--space-5);
+    }
+}
+
+@media (min-width: 750px) {
+	.options {
+        grid-template-columns: repeat(5, calc(var(--space-6) + var(--space-6)));
+    }
+    
+    .options button {
+        padding: var(--space-3);
+        width: var(--space-6);
+    }
+}

@@ -1,0 +1,205 @@
+main {
+	padding: var(--space-1);
+}
+
+.question-info {
+    justify-content: flex-end;
+}
+
+.question-info > div:first-child  {
+    color: var(--clr-text);
+}
+
+.q {
+    padding: var(--space-1);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    border: none;
+    background-color: var(--clr-secondary);
+    color: var(--clr-background);
+}
+
+.game-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--fs-100);
+}
+
+.qtext {
+    width: 100%;
+    border: 2px solid var(--clr-primary);
+	text-align: center;
+    font-size: var(--fs-200);
+}
+
+.current-result-text,
+.round-target-text,
+.number-left,
+.operator-left {
+    color: var(--clr-primary);
+}
+
+#operations-container {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    gap: var(--space-1);
+}
+
+.numbers,
+.operators {
+    width: fit-content;
+}
+
+.number-info {
+    text-align: center;
+    font-weight: 400;
+}
+
+.operator-info {
+    text-align: center;
+    font-weight: 400;
+}
+
+.number-button,
+.operator-button {
+    display: flex;
+    padding: var(--space-1);
+    gap: var(--space-1);
+    border: 3px solid var(--clr-secondary);
+}
+
+.number-button button,
+.operator-button button {
+    padding: var(--space-1);
+    font-size: var(--fs-100);
+    text-align: center;
+    border: 1px solid var(--clr-secondary);
+}
+
+@media (min-width: 250px) {
+    main {
+        padding: var(--space-3);
+    }
+    
+    .q {
+        padding: var(--space-3);
+        gap: var(--space-3);
+        border-radius: 5px;
+    }
+    
+    .game-stats {
+        font-size: var(--fs-200);
+    }
+    
+    .qtext {
+        border: 3px solid var(--clr-primary);
+        font-size: var(--fs-300);
+    }
+    
+    #operations-container {
+        gap: var(--space-3);
+    }
+    
+    .number-info {
+        font-weight: 600;
+    }
+    
+    .operator-info {
+        font-weight: 600;
+    }
+    
+    .number-button,
+    .operator-button {
+        padding: var(--space-3);
+        gap: var(--space-3);
+    }
+    
+    .number-button button,
+    .operator-button button {
+        padding: var(--space-2);
+        font-size: var(--fs-200);
+        border: 3px solid var(--clr-secondary);
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 350px) {
+	.q {
+        border-radius: 10px;
+    }
+    
+    .game-stats {
+        font-size: var(--fs-300);
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .qtext {
+        font-size: var(--fs-600);
+    }
+    
+    .number-info {
+        text-align: left;
+    }
+    
+    .operator-info {
+        text-align: right;
+    }
+    
+    .number-button,
+    .operator-button {
+        padding: var(--space-3);
+        gap: var(--space-3);
+    }
+    
+    .number-button button,
+    .operator-button button {
+        padding: var(--space-3);
+        font-size: var(--fs-300);
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 500px) {
+	.q {
+        flex-direction: column;
+    }
+    
+    .number-button,
+    .operator-button {
+        gap: var(--space-5);
+    }
+    
+    .number-button button,
+    .operator-button button {
+        padding: var(--space-3) var(--space-5);
+        font-size: var(--fs-400);
+    }
+}
+
+@media (min-width: 750px) {
+    .number-button,
+    .operator-button {
+        gap: var(--space-5);        
+    }
+    
+    .number-button button,
+    .operator-button button {
+        padding: var(--space-3) var(--space-5);
+    }
+}
+
+@media (min-width: 1000px) {
+    #operations-container {
+        grid-auto-flow: column;
+    }
+
+    .number-button,
+    .operator-button {
+        gap: var(--space-4);        
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../../assets/images/logo.svg"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+		/>
+
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="../../question/question.css" />
+		<link rel="stylesheet" href="g2.css" />
+	</head>
+
+	<body>
+		<main>
+			<section id="quiz-menu">
+				<header>Quiz</header>
+				<!-- <div class="quiz-options">
+					<button class="menu-button-style size-format number-game">
+						<i class="fa-regular fa-play"></i>
+						<div>Play</div>
+					</button>
+					<button class="menu-button-style size-format word-game">
+						<i class="fa-regular fa-award"></i>
+						<div>Prizes</div>
+					</button>
+					<button class="menu-button-style size-format movie-game">
+						<i class="fa-regular fa-list"></i>
+						<div>Rules</div>
+					</button>
+				</div> -->
+			</section>
+
+			<!--
+				A random number between a specified range will be generated as the target.
+				Your task is to guess the target number.
+				If the difference between your guess and the target is:
+					More than 2 and your guess is higher: Display "Too High".
+					2 or less and your guess is higher: Display "High".
+					More than 2 and your guess is lower: Display "Too Low".
+					2 or less and your guess is lower: Display "Low".
+					If your guess matches the target, display "Correct".
+				Keep guessing until you find the correct number.
+			-->
+			<section id="question" data-page="2">
+				<section class="question-info">
+					<div>
+						Time Left: <span class="time" data-timeLeft="60">60 seconds</span>
+					</div>
+				</section>
+
+				<section class="q">
+					<div class="game-stats">
+						<div>Result: <span class="current-result-text">0</span></div>
+						<div>Target: <span class="round-target-text">2</span></div>
+					</div>
+					<div class="qtext">0</div>
+				</section>
+
+				<section id="operations-container">
+					<section class="numbers">
+						<div class="number-info">
+							Moves Left: <span class="number-left" data-numberLeft="4">4</span>
+						</div>
+
+						<section class="number-button">
+							<button data-value="1" data-selected="false">1</button>
+							<button data-value="4" data-selected="false">4</button>
+							<button data-value="5" data-selected="false">5</button>
+							<button data-value="7" data-selected="false">7</button>
+						</section>
+					</section>
+
+					<section class="operators">
+						<div class="operator-info">
+							Moves Left:
+							<span class="operator-left" data-operatorLeft="3">3</span>
+						</div>
+
+						<section class="operator-button">
+							<button data-value="+" data-selected="false">+</button>
+							<button data-value="-" data-selected="false">-</button>
+							<button data-value="*" data-selected="false">*</button>
+							<button data-value="/" data-selected="false">/</button>
+						</section>
+					</section>
+				</section>
+
+				<section class="actions">
+					<button class="reset"><i class="far fa-undo"></i>Reset</button>
+					<button class="next">
+						Next<i class="fa-regular fa-arrow-right"></i>
+					</button>
+				</section>
+			</section>
+
+			<section id="result">
+				<div class="result-text"></div>
+				<button class="move"></button>
+			</section>
+		</main>
+
+		<script src="g2.js"></script>
+	</body>
+</html>
