@@ -19,7 +19,7 @@
 
 		<link rel="stylesheet" href="../../style.css" />
 		<link rel="stylesheet" href="../../question/question.css" />
-		<link rel="stylesheet" href="g2.css" />
+		<link rel="stylesheet" href="../g2/g2.css" />
 	</head>
 
 	<body>
@@ -56,32 +56,18 @@
 			<section id="question">
 				<section class="question-info">
 					<div>
-						Time Left: <span class="time" data-timeLeft="60">60 seconds</span>
+						Time Left: <span class="time" data-timeLeft="30">30 seconds</span>
 					</div>
 				</section>
 
 				<section class="q">
 					<div class="game-stats">
-						<div>Result: <span class="current-result-text">0</span></div>
-						<div>Target: <span class="round-target-text">2</span></div>
+						<div>Target: <span class="round-target-text">0</span></div>
 					</div>
-					<div class="qtext">0</div>
+					<div class="qtext">7 . 3 . 7 . 3</div>
 				</section>
 
 				<section id="operations-container">
-					<section class="numbers">
-						<div class="number-info">
-							Moves Left: <span class="number-left" data-numberLeft="4">4</span>
-						</div>
-
-						<section class="number-button">
-							<button data-value="1" data-selected="false">1</button>
-							<button data-value="4" data-selected="false">4</button>
-							<button data-value="5" data-selected="false">5</button>
-							<button data-value="7" data-selected="false">7</button>
-						</section>
-					</section>
-
 					<section class="operators">
 						<div class="operator-info">
 							Moves Left:
@@ -107,10 +93,14 @@
 
 			<section id="result">
 				<div class="result-text"></div>
+				<div class="explanation">
+					<div>Your Solution: <span class="player-solution"><span style="font-weight: 700">No solution</span></span></div>
+					<div>One of the solutions: 7 <span style="font-weight: 700">*</span> 3 <span style="font-weight: 700">/</span> 7 <span style="font-weight: 700">-</span> 3 = <span style="font-weight: 700">0</span></div>
+				</div>
 				<button class="move"></button>
 			</section>
 		</main>
 
-		<script src="g2.js"></script>
+		<script src="g3.js"></script>
 	</body>
 </html>

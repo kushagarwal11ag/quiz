@@ -29,8 +29,6 @@ let numberLeft = parseInt(numbers.getAttribute("data-numberLeft"));
 let operatorLeft = parseInt(operators.getAttribute("data-operatorLeft"));
 
 let operation = [];
-
-let currentPage = parseInt(question.getAttribute("data-page"));
 let changeToVariable = 0;
 
 home.addEventListener("click", () => {
@@ -181,6 +179,6 @@ function nextButton(val) {
 }
 
 function changePage(changeTo) {
-	if (changeTo === 1) window.location.href = "../../question/q1.html";
+	if (changeTo === 1) window.location.href = "../../question/q3.html";
 	else if (changeTo === -1) window.location.href = "../../index.html";
 }

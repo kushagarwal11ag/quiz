@@ -57,6 +57,16 @@
     border: 3px solid var(--clr-secondary);
 }
 
+.riddle-text {
+    all: unset;
+    padding: var(--space-3);
+    border: 2px solid var(--clr-secondary);
+}
+
+.riddle-text:focus {
+    border-color: var(--clr-primary);
+}
+
 .actions {
     display: flex;
     flex-direction: column;

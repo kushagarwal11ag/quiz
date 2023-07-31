@@ -102,6 +102,11 @@ main {
     #operations-container {
         gap: var(--space-3);
     }
+
+    .numbers,
+    .operators {
+        width: 100%;
+    }
     
     .number-info {
         font-weight: 600;
@@ -119,6 +124,7 @@ main {
     
     .number-button button,
     .operator-button button {
+        width: 100%;
         padding: var(--space-2);
         font-size: var(--fs-200);
         border: 3px solid var(--clr-secondary);
@@ -168,6 +174,11 @@ main {
 	.q {
         flex-direction: column;
     }
+
+    .operators,
+    .numbers {
+        width: inherit;
+    }
     
     .number-button,
     .operator-button {
@@ -176,6 +187,7 @@ main {
     
     .number-button button,
     .operator-button button {
+        width: inherit;
         padding: var(--space-3) var(--space-5);
         font-size: var(--fs-400);
     }

@@ -14,7 +14,6 @@ let interval;
 let movesLeft = parseInt(moveDisplay.getAttribute("data-movesLeft"));
 let timeLeft = parseInt(timeDisplay.getAttribute("data-timeLeft"));
 const randomNumber = Math.floor(Math.random() * 20) + 1;
-let currentPage = parseInt(question.getAttribute("data-page"));
 let noOfChoice = parseInt(question.getAttribute("data-choice"));
 let noOfButtonSelected = 0;
 let changeToVariable = 0;

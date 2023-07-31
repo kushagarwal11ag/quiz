@@ -4,6 +4,7 @@ const home = document.querySelector("#quiz-menu header");
 const question = document.getElementById("question");
 const timeDisplay = document.querySelector(".time");
 const optionButton = document.querySelectorAll(".options button");
+const riddleText = document.querySelector(".riddle-text");
 const reset = document.querySelector(".reset");
 const next = document.querySelector(".next");
 const result = document.getElementById("result");
@@ -24,6 +25,12 @@ home.addEventListener("click", () => {
 optionButton.forEach((button) => {
 	button.addEventListener("click", changeColor);
 });
+
+if (currentPage === 4) {
+	riddleText.addEventListener("input", () => {
+		if (riddleText.value !== "") next.disabled = false;
+	});
+}
 
 reset.addEventListener("click", resetButtons);
 next.addEventListener("click", nextRound);
@@ -68,6 +75,7 @@ function resetButtons() {
 		button.style.color = "var(--clr-text)";
 		button.setAttribute("data-selected", "false");
 	});
+	if (currentPage === 4) riddleText.value = "";
 	next.disabled = true;
 	noOfButtonSelected = 0;
 	value = 0;
@@ -80,6 +88,9 @@ function nextRound() {
 	if (value === noOfChoice) {
 		resultText.innerText = "You Win!";
 		move.innerText = "Continue";
+	} else if (currentPage === 4 && riddleText.value.toLowerCase() === "echo") {
+		resultText.innerText = "You Win!";
+		move.innerText = "Continue";
 	} else {
 		if (value === -1) resultText.innerText = "Time Up!";
 		else resultText.innerText = "You Lose!";
@@ -88,10 +99,10 @@ function nextRound() {
 }
 
 function changePage() {
-	if (value === noOfChoice) {
+	if (move.textContent === "Continue") {
 		if (currentPage === 1) window.location.href = "q2.html";
-		else if (currentPage === 2) window.location.href = "q3.html";
-		else if (currentPage === 3)
-			window.location.href = "../game/g1/g1.html";
+		else if (currentPage === 2) window.location.href = "../game/g1/g1.html";
+		else if (currentPage === 3) window.location.href = "../game/g3/g3.html";
+		else if (currentPage === 4) window.location.href = "../game/g4/g4.html";
 	} else window.location.href = "../index.html";
 }
