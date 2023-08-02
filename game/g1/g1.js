@@ -46,32 +46,31 @@ countdownTimer(timeLeft, () => {
 function changeColor(event) {
 	const button = event.currentTarget;
 	let buttonSelected = button.getAttribute("data-selected") === "true";
+	let data = parseInt(button.getAttribute("data-value"));
 	movesLeft--;
 	moveDisplay.innerText = `${movesLeft}`;
 	if (!buttonSelected && noOfButtonSelected < noOfChoice) {
 		button.style.color = "var(--clr-background)";
 		button.style.borderColor = "var(--clr-background)";
 		button.style.cursor = "default";
-		if (parseInt(button.getAttribute("data-value")) === randomNumber) {
+		if (data === randomNumber) {
 			gameRoundResult.innerText = "Correct!";
+			button.innerHTML =
+				"<img class='mole' src='../../assets/images/mole.svg' />";
 			nextRound(1);
-		} else if (parseInt(button.getAttribute("data-value")) > randomNumber + 2) {
+		} else if (data > randomNumber + 2) {
 			gameRoundResult.innerText = "Too High!";
-		} else if (parseInt(button.getAttribute("data-value")) > randomNumber) {
+		} else if (data > randomNumber) {
 			gameRoundResult.innerText = "High!";
-		} else if (parseInt(button.getAttribute("data-value")) < randomNumber - 2) {
+		} else if (data < randomNumber - 2) {
 			gameRoundResult.innerText = "Too Low!";
-		} else if (parseInt(button.getAttribute("data-value")) < randomNumber) {
+		} else if (data < randomNumber) {
 			gameRoundResult.innerText = "Low!";
 		}
 		button.setAttribute("data-selected", "true");
 		noOfButtonSelected++;
 	}
-	if (
-		noOfButtonSelected === noOfChoice &&
-		parseInt(button.getAttribute("data-value")) !== randomNumber
-	)
-		nextRound(0);
+	if (noOfButtonSelected === noOfChoice && data !== randomNumber) nextRound(0);
 }
 
 function nextRound(condition) {

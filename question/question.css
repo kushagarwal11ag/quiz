@@ -15,6 +15,7 @@
     align-items: center;
     font-weight: 600;
     font-size: var(--fs-100);
+    gap: var(--space-2);
 }
 
 .question-info > div:first-child  {
@@ -32,7 +33,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-4);
-    border: 3px solid var(--clr-secondary);
+    border: 1px solid var(--clr-secondary);
 }
 
 .q header {
@@ -125,6 +126,7 @@
 	.q {
         font-size: var(--fs-200);
 		flex-direction: column;
+        border-width: 2px;
 	}
 
     .options button {
@@ -139,6 +141,7 @@
 
 	.q {
 		flex-direction: row;
+        border-width: 3px;
 	}
 }
 

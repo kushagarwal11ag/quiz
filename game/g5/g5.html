@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../../assets/images/logo.svg"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+		/>
+
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="../../question/question.css" />
+		<link rel="stylesheet" href="g5.css" />
+	</head>
+
+	<body>
+		<main>
+			<section id="quiz-menu">
+				<header>Quiz</header>
+				<!-- <div class="quiz-options">
+					<button class="menu-button-style size-format number-game">
+						<i class="fa-regular fa-play"></i>
+						<div>Play</div>
+					</button>
+					<button class="menu-button-style size-format word-game">
+						<i class="fa-regular fa-award"></i>
+						<div>Prizes</div>
+					</button>
+					<button class="menu-button-style size-format movie-game">
+						<i class="fa-regular fa-list"></i>
+						<div>Rules</div>
+					</button>
+				</div> -->
+			</section>
+
+			<!--
+				A random number between a specified range will be generated as the target.
+				Your task is to guess the target number.
+				If the difference between your guess and the target is:
+					More than 2 and your guess is higher: Display "Too High".
+					2 or less and your guess is higher: Display "High".
+					More than 2 and your guess is lower: Display "Too Low".
+					2 or less and your guess is lower: Display "Low".
+					If your guess matches the target, display "Correct".
+				Keep guessing until you find the correct number.
+			-->
+			<section id="question">
+				<section id="grid-container">
+					<section class="question-info">
+						<div>Target: <span>0</span></div>
+						<div>
+							Time Left:
+							<span class="time" data-timeLeft="300">300 seconds</span>
+						</div>
+					</section>
+
+					<section class="row">
+						<button class="number" data-id="a" data-open="b-f">2</button>
+						<button class="operator" data-id="b" data-open="a-c-g">x</button>
+						<button class="number" data-id="c" data-open="b-d-h">10</button>
+						<button class="operator" data-id="d" data-open="c-e-i">x</button>
+						<button class="number" data-id="e" data-open="d-j">1</button>
+					</section>
+
+					<section class="row">
+						<button class="operator" data-id="f" data-open="a-g-k">+</button>
+						<button class="number" data-id="g" data-open="b-f-h-l">5</button>
+						<button class="operator" data-id="h" data-open="c-g-i-m">/</button>
+						<button class="number" data-id="i" data-open="d-h-j-n">9</button>
+						<button class="operator" data-id="j" data-open="e-i-o">+</button>
+					</section>
+
+					<section class="row">
+						<button class="number" data-id="k" data-open="f-l-p">4</button>
+						<button class="operator" data-id="l" data-open="g-k-m-q">x</button>
+						<button class="number" data-id="m" data-open="h-l-n-r">14</button>
+						<button class="operator" data-id="n" data-open="i-m-o-s">x</button>
+						<button class="number" data-id="o" data-open="j-n-t">3</button>
+					</section>
+
+					<section class="row">
+						<button class="operator" data-id="p" data-open="k-q">-</button>
+						<button class="number" data-id="q" data-open="l-p-r">7</button>
+						<button class="operator" data-id="r" data-open="m-q-s">/</button>
+						<button class="number" data-id="s" data-open="n-r-t">6</button>
+						<button class="operator" data-id="t" data-open="o-s">-</button>
+					</section>
+				</section>
+
+				<section class="actions">
+					<button class="reset"><i class="far fa-undo"></i>Reset</button>
+					<button class="next">
+						Next<i class="fa-regular fa-arrow-right"></i>
+					</button>
+				</section>
+			</section>
+
+			<section id="result">
+				<div class="result-text"></div>
+				<div class="explanation"></div>
+				<button class="move"></button>
+			</section>
+		</main>
+
+		<script src="g5.js"></script>
+	</body>
+</html>

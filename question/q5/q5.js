@@ -109,6 +109,6 @@ function nextRound(val) {
 
 function changePage() {
 	if (move.textContent === "Continue") {
-		window.location.href = "../../index.html";
+		window.location.href = "../../game/g5/g5.html";
 	} else window.location.href = "../../index.html";
 }
