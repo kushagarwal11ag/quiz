@@ -22,10 +22,10 @@
 1. The website follows the system theme. (light/dark theme)
 2. All the questions have timer which adds a level of difficulty for the user.
 3. This quiz has logical questions
-    - *Single Choice* questions: Select only 1 answer to win the round.
-    - *Multiple Choice* questions: Select 1 or more answers to win the round.
-    - *Text Based* questions: Enter answer in the text field to win the round.
-    - *Re - Arrangement* questions: Re-arrange the list of items to win the round.
+    - *Single Choice* - Select only 1 answer to win the round.
+    - *Multiple Choice* - Select 1 or more answers to win the round.
+    - *Text Based* - Enter answer in the text field to win the round.
+    - *Re - Arrangement* - Re-arrange the list of items to win the round.
 4. This quiz has logical games
     - *Mole Enigma* - To win the round, identify the mole hidden behind a number using the hints provided.
     - *Number Wizardry* - Enter numbers and operators to achieve a desired result.

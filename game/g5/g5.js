@@ -59,6 +59,7 @@ function addOperator(event) {
 
 	numberButton.forEach((allButton) => {
 		allButton.style.backgroundColor = "var(--clr-background)";
+		allButton.style.color = "var(--clr-secondary)";
 		allButton.removeEventListener("click", addOperator);
 	});
 	highlightPath(openButton);
@@ -85,7 +86,7 @@ function highlightPath(lightPath) {
 	allButtons.forEach((button) => {
 		if (button.getAttribute("data-id") === lightPath[i]) {
 			button.style.backgroundColor = "var(--clr-primary)";
-			button.style.color = "var(--clr-secondary)";
+			button.style.color = "var(--clr-dark)";
 			i++;
 			if (button.classList.contains("operator") && !path.includes(button)) {
 				button.addEventListener("click", addNumber);
@@ -102,7 +103,7 @@ function highlightPath(lightPath) {
 function tracePath(accentuatePath) {
 	accentuatePath.forEach((pathButton) => {
 		pathButton.style.backgroundColor = "var(--clr-accent)";
-		pathButton.style.color = "var(--clr-secondary)";
+		pathButton.style.color = "var(--clr-dark)";
 		let attr = pathButton.getAttribute("data-id");
 		if (!calculateInclude.includes(attr)) {
 			calculateInclude.push(attr);
